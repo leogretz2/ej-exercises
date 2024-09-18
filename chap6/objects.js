@@ -26,6 +26,8 @@ class Vec {
 }
 
 // Ex. 2 - Groups
+// Note: This class should probably be implemented with Map, or Set rather than object to preserve type.
+    // Object converts all keys to string so this Group would not differentiate 4 and "4". Could use the value in the object to denote the type of the "value" in Group.
 class Group {
     constructor() {
         this.guys = {};
