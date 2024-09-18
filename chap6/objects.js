@@ -30,31 +30,44 @@ class Group {
 
     add(x) {
         if (!this.has(x))
-            guys = guys + [x];
+            this.guys = this.guys + [x];
         return x;
     }
 
     has(x){
-        if (this.guys[x])
-        for (const i in this.guys) {
-            if (i === x)
-                return true
-        }
-        return false;
+        return this.guys[x]
+        // for (const i in this.guys) {
+        //     if (i === x)
+        //         return true
+        // }
+        // return false;
     }
 
-
+    delete(x) {
+        if(this.has(x)){
+            delete this.x
+        } else {
+            return false
+        }
+    }
 }
 
 function main(){
-    v = new Vec(3,4)
-    v2 = new Vec(4,5)
-    console.log(v.length)
-    console.log(v.plus(v2))
-    console.log(v.minus(v2))
-    console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
-    console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
-    console.log(new Vec(3, 4).length);
+    // Vector
+    // v = new Vec(3,4)
+    // v2 = new Vec(4,5)
+    // console.log(v.length)
+    // console.log(v.plus(v2))
+    // console.log(v.minus(v2))
+    // console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
+    // console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
+    // console.log(new Vec(3, 4).length);
+
+    // Group
+    g = new Group()
+    g.add(4)
+    g.add(6)
+    console.log('ff',g)
 }
 
 main()
